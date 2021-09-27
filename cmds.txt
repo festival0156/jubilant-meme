@@ -1,4 +1,2 @@
-gcc
-cpp
-python
+python --version
 java
