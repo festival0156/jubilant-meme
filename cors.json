@@ -1,0 +1,8 @@
+[
+  {
+    "origin": "*",
+    "headers": ["Authorization"],
+    "methods": ["GET"],
+    "maxAgeSeconds": 3600
+  }
+]
