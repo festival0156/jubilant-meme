@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10.0">
+    <title>Bible Book Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .book {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .chapters a {
+            margin-right: 10px;
+        }
+        .chapters {
+            display: none; /*display: grid;*/
+            margin: 10px;
+
+            grid-template-columns: repeat(6, 1fr); /* 5 equal columns */
+            gap: 10px; /* Optional: space between columns */
+        }
+        .chapters a {
+            text-align: center;
+            display: block;
+            padding: 5px;
+            background-color: #f0f0f0;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .chapters a:hover {
+            background-color: #e0e0e0;
+        }
+
+        span {
+            white-space: pre-line;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: white;
+                background: #181818;
+            }
+        }
+    </style>
+    <script>
+        function toggleChapters(bookElem) {
+            // console.log(bookElem);
+            const chapters = bookElem.firstElementChild;
+            if (chapters.style.display === 'grid') {
+                bookElem.firstChild.textContent = bookElem.firstChild.textContent.replace('▼', '▶');
+                chapters.style.display = 'none';
+            } else {
+                bookElem.firstChild.textContent = bookElem.firstChild.textContent.replace('▶', '▼');
+                chapters.style.display = 'grid';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Old Testament</h2>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Genesis
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/GEN.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/GEN.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/GEN.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/GEN.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/GEN.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/GEN.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/GEN.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/GEN.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/GEN.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/GEN.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/GEN.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/GEN.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/GEN.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/GEN.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/GEN.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/GEN.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/GEN.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/GEN.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/GEN.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/GEN.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/GEN.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/GEN.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/GEN.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/GEN.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/GEN.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/GEN.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/GEN.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/GEN.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/GEN.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/GEN.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/GEN.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/GEN.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/GEN.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/GEN.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/GEN.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/GEN.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/GEN.36.SBCL">36</a>
+            <a href="https://www.bible.com/bible/155/GEN.37.SBCL">37</a>
+            <a href="https://www.bible.com/bible/155/GEN.38.SBCL">38</a>
+            <a href="https://www.bible.com/bible/155/GEN.39.SBCL">39</a>
+            <a href="https://www.bible.com/bible/155/GEN.40.SBCL">40</a>
+            <a href="https://www.bible.com/bible/155/GEN.41.SBCL">41</a>
+            <a href="https://www.bible.com/bible/155/GEN.42.SBCL">42</a>
+            <a href="https://www.bible.com/bible/155/GEN.43.SBCL">43</a>
+            <a href="https://www.bible.com/bible/155/GEN.44.SBCL">44</a>
+            <a href="https://www.bible.com/bible/155/GEN.45.SBCL">45</a>
+            <a href="https://www.bible.com/bible/155/GEN.46.SBCL">46</a>
+            <a href="https://www.bible.com/bible/155/GEN.47.SBCL">47</a>
+            <a href="https://www.bible.com/bible/155/GEN.48.SBCL">48</a>
+            <a href="https://www.bible.com/bible/155/GEN.49.SBCL">49</a>
+            <a href="https://www.bible.com/bible/155/GEN.50.SBCL">50</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Exodus
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/EXO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/EXO.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/EXO.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/EXO.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/EXO.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/EXO.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/EXO.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/EXO.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/EXO.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/EXO.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/EXO.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/EXO.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/EXO.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/EXO.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/EXO.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/EXO.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/EXO.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/EXO.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/EXO.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/EXO.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/EXO.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/EXO.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/EXO.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/EXO.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/EXO.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/EXO.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/EXO.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/EXO.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/EXO.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/EXO.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/EXO.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/EXO.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/EXO.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/EXO.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/EXO.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/EXO.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/EXO.36.SBCL">36</a>
+            <a href="https://www.bible.com/bible/155/EXO.37.SBCL">37</a>
+            <a href="https://www.bible.com/bible/155/EXO.38.SBCL">38</a>
+            <a href="https://www.bible.com/bible/155/EXO.39.SBCL">39</a>
+            <a href="https://www.bible.com/bible/155/EXO.40.SBCL">40</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Leviticus
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/LEV.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/LEV.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/LEV.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/LEV.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/LEV.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/LEV.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/LEV.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/LEV.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/LEV.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/LEV.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/LEV.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/LEV.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/LEV.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/LEV.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/LEV.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/LEV.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/LEV.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/LEV.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/LEV.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/LEV.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/LEV.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/LEV.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/LEV.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/LEV.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/LEV.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/LEV.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/LEV.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/LEV.27.SBCL">27</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Numbers
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/NUM.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/NUM.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/NUM.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/NUM.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/NUM.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/NUM.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/NUM.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/NUM.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/NUM.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/NUM.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/NUM.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/NUM.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/NUM.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/NUM.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/NUM.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/NUM.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/NUM.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/NUM.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/NUM.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/NUM.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/NUM.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/NUM.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/NUM.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/NUM.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/NUM.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/NUM.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/NUM.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/NUM.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/NUM.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/NUM.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/NUM.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/NUM.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/NUM.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/NUM.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/NUM.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/NUM.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/NUM.36.SBCL">36</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Deuteronomy
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/DEU.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/DEU.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/DEU.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/DEU.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/DEU.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/DEU.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/DEU.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/DEU.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/DEU.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/DEU.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/DEU.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/DEU.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/DEU.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/DEU.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/DEU.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/DEU.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/DEU.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/DEU.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/DEU.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/DEU.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/DEU.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/DEU.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/DEU.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/DEU.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/DEU.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/DEU.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/DEU.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/DEU.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/DEU.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/DEU.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/DEU.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/DEU.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/DEU.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/DEU.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/DEU.34.SBCL">34</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Joshua
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JOS.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JOS.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JOS.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JOS.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/JOS.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/JOS.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/JOS.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/JOS.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/JOS.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/JOS.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/JOS.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/JOS.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/JOS.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/JOS.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/JOS.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/JOS.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/JOS.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/JOS.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/JOS.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/JOS.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/JOS.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/JOS.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/JOS.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/JOS.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/JOS.24.SBCL">24</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Judges
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JDG.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JDG.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JDG.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JDG.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/JDG.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/JDG.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/JDG.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/JDG.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/JDG.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/JDG.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/JDG.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/JDG.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/JDG.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/JDG.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/JDG.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/JDG.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/JDG.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/JDG.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/JDG.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/JDG.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/JDG.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/JDG.21.SBCL">21</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Ruth
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/RUT.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/RUT.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/RUT.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/RUT.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/RUT.4.SBCL">4</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 Samuel
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1SA.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1SA.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1SA.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1SA.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1SA.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1SA.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/1SA.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/1SA.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/1SA.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/1SA.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/1SA.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/1SA.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/1SA.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/1SA.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/1SA.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/1SA.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/1SA.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/1SA.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/1SA.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/1SA.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/1SA.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/1SA.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/1SA.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/1SA.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/1SA.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/1SA.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/1SA.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/1SA.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/1SA.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/1SA.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/1SA.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/1SA.31.SBCL">31</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 Samuel
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2SA.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2SA.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/2SA.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/2SA.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/2SA.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/2SA.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/2SA.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/2SA.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/2SA.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/2SA.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/2SA.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/2SA.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/2SA.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/2SA.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/2SA.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/2SA.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/2SA.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/2SA.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/2SA.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/2SA.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/2SA.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/2SA.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/2SA.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/2SA.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/2SA.24.SBCL">24</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 Kings
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1KI.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1KI.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1KI.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1KI.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1KI.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1KI.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/1KI.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/1KI.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/1KI.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/1KI.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/1KI.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/1KI.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/1KI.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/1KI.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/1KI.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/1KI.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/1KI.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/1KI.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/1KI.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/1KI.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/1KI.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/1KI.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/1KI.22.SBCL">22</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 Kings
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2KI.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2KI.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/2KI.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/2KI.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/2KI.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/2KI.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/2KI.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/2KI.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/2KI.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/2KI.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/2KI.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/2KI.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/2KI.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/2KI.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/2KI.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/2KI.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/2KI.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/2KI.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/2KI.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/2KI.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/2KI.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/2KI.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/2KI.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/2KI.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/2KI.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/2KI.25.SBCL">25</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 Chronicles
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1CH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1CH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1CH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1CH.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1CH.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1CH.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/1CH.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/1CH.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/1CH.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/1CH.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/1CH.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/1CH.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/1CH.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/1CH.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/1CH.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/1CH.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/1CH.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/1CH.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/1CH.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/1CH.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/1CH.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/1CH.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/1CH.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/1CH.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/1CH.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/1CH.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/1CH.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/1CH.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/1CH.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/1CH.29.SBCL">29</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 Chronicles
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2CH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2CH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/2CH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/2CH.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/2CH.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/2CH.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/2CH.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/2CH.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/2CH.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/2CH.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/2CH.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/2CH.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/2CH.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/2CH.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/2CH.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/2CH.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/2CH.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/2CH.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/2CH.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/2CH.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/2CH.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/2CH.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/2CH.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/2CH.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/2CH.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/2CH.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/2CH.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/2CH.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/2CH.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/2CH.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/2CH.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/2CH.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/2CH.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/2CH.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/2CH.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/2CH.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/2CH.36.SBCL">36</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Ezra
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/EZR.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/EZR.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/EZR.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/EZR.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/EZR.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/EZR.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/EZR.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/EZR.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/EZR.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/EZR.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/EZR.10.SBCL">10</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Nehemiah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/NEH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/NEH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/NEH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/NEH.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/NEH.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/NEH.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/NEH.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/NEH.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/NEH.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/NEH.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/NEH.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/NEH.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/NEH.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/NEH.13.SBCL">13</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Esther
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/EST.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/EST.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/EST.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/EST.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/EST.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/EST.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/EST.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/EST.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/EST.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/EST.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/EST.10.SBCL">10</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Job
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JOB.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JOB.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JOB.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JOB.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/JOB.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/JOB.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/JOB.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/JOB.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/JOB.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/JOB.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/JOB.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/JOB.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/JOB.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/JOB.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/JOB.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/JOB.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/JOB.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/JOB.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/JOB.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/JOB.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/JOB.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/JOB.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/JOB.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/JOB.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/JOB.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/JOB.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/JOB.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/JOB.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/JOB.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/JOB.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/JOB.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/JOB.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/JOB.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/JOB.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/JOB.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/JOB.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/JOB.36.SBCL">36</a>
+            <a href="https://www.bible.com/bible/155/JOB.37.SBCL">37</a>
+            <a href="https://www.bible.com/bible/155/JOB.38.SBCL">38</a>
+            <a href="https://www.bible.com/bible/155/JOB.39.SBCL">39</a>
+            <a href="https://www.bible.com/bible/155/JOB.40.SBCL">40</a>
+            <a href="https://www.bible.com/bible/155/JOB.41.SBCL">41</a>
+            <a href="https://www.bible.com/bible/155/JOB.42.SBCL">42</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Psalms
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/PSA.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/PSA.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/PSA.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/PSA.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/PSA.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/PSA.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/PSA.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/PSA.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/PSA.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/PSA.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/PSA.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/PSA.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/PSA.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/PSA.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/PSA.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/PSA.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/PSA.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/PSA.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/PSA.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/PSA.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/PSA.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/PSA.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/PSA.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/PSA.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/PSA.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/PSA.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/PSA.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/PSA.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/PSA.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/PSA.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/PSA.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/PSA.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/PSA.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/PSA.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/PSA.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/PSA.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/PSA.36.SBCL">36</a>
+            <a href="https://www.bible.com/bible/155/PSA.37.SBCL">37</a>
+            <a href="https://www.bible.com/bible/155/PSA.38.SBCL">38</a>
+            <a href="https://www.bible.com/bible/155/PSA.39.SBCL">39</a>
+            <a href="https://www.bible.com/bible/155/PSA.40.SBCL">40</a>
+            <a href="https://www.bible.com/bible/155/PSA.41.SBCL">41</a>
+            <a href="https://www.bible.com/bible/155/PSA.42.SBCL">42</a>
+            <a href="https://www.bible.com/bible/155/PSA.43.SBCL">43</a>
+            <a href="https://www.bible.com/bible/155/PSA.44.SBCL">44</a>
+            <a href="https://www.bible.com/bible/155/PSA.45.SBCL">45</a>
+            <a href="https://www.bible.com/bible/155/PSA.46.SBCL">46</a>
+            <a href="https://www.bible.com/bible/155/PSA.47.SBCL">47</a>
+            <a href="https://www.bible.com/bible/155/PSA.48.SBCL">48</a>
+            <a href="https://www.bible.com/bible/155/PSA.49.SBCL">49</a>
+            <a href="https://www.bible.com/bible/155/PSA.50.SBCL">50</a>
+            <a href="https://www.bible.com/bible/155/PSA.51.SBCL">51</a>
+            <a href="https://www.bible.com/bible/155/PSA.52.SBCL">52</a>
+            <a href="https://www.bible.com/bible/155/PSA.53.SBCL">53</a>
+            <a href="https://www.bible.com/bible/155/PSA.54.SBCL">54</a>
+            <a href="https://www.bible.com/bible/155/PSA.55.SBCL">55</a>
+            <a href="https://www.bible.com/bible/155/PSA.56.SBCL">56</a>
+            <a href="https://www.bible.com/bible/155/PSA.57.SBCL">57</a>
+            <a href="https://www.bible.com/bible/155/PSA.58.SBCL">58</a>
+            <a href="https://www.bible.com/bible/155/PSA.59.SBCL">59</a>
+            <a href="https://www.bible.com/bible/155/PSA.60.SBCL">60</a>
+            <a href="https://www.bible.com/bible/155/PSA.61.SBCL">61</a>
+            <a href="https://www.bible.com/bible/155/PSA.62.SBCL">62</a>
+            <a href="https://www.bible.com/bible/155/PSA.63.SBCL">63</a>
+            <a href="https://www.bible.com/bible/155/PSA.64.SBCL">64</a>
+            <a href="https://www.bible.com/bible/155/PSA.65.SBCL">65</a>
+            <a href="https://www.bible.com/bible/155/PSA.66.SBCL">66</a>
+            <a href="https://www.bible.com/bible/155/PSA.67.SBCL">67</a>
+            <a href="https://www.bible.com/bible/155/PSA.68.SBCL">68</a>
+            <a href="https://www.bible.com/bible/155/PSA.69.SBCL">69</a>
+            <a href="https://www.bible.com/bible/155/PSA.70.SBCL">70</a>
+            <a href="https://www.bible.com/bible/155/PSA.71.SBCL">71</a>
+            <a href="https://www.bible.com/bible/155/PSA.72.SBCL">72</a>
+            <a href="https://www.bible.com/bible/155/PSA.73.SBCL">73</a>
+            <a href="https://www.bible.com/bible/155/PSA.74.SBCL">74</a>
+            <a href="https://www.bible.com/bible/155/PSA.75.SBCL">75</a>
+            <a href="https://www.bible.com/bible/155/PSA.76.SBCL">76</a>
+            <a href="https://www.bible.com/bible/155/PSA.77.SBCL">77</a>
+            <a href="https://www.bible.com/bible/155/PSA.78.SBCL">78</a>
+            <a href="https://www.bible.com/bible/155/PSA.79.SBCL">79</a>
+            <a href="https://www.bible.com/bible/155/PSA.80.SBCL">80</a>
+            <a href="https://www.bible.com/bible/155/PSA.81.SBCL">81</a>
+            <a href="https://www.bible.com/bible/155/PSA.82.SBCL">82</a>
+            <a href="https://www.bible.com/bible/155/PSA.83.SBCL">83</a>
+            <a href="https://www.bible.com/bible/155/PSA.84.SBCL">84</a>
+            <a href="https://www.bible.com/bible/155/PSA.85.SBCL">85</a>
+            <a href="https://www.bible.com/bible/155/PSA.86.SBCL">86</a>
+            <a href="https://www.bible.com/bible/155/PSA.87.SBCL">87</a>
+            <a href="https://www.bible.com/bible/155/PSA.88.SBCL">88</a>
+            <a href="https://www.bible.com/bible/155/PSA.89.SBCL">89</a>
+            <a href="https://www.bible.com/bible/155/PSA.90.SBCL">90</a>
+            <a href="https://www.bible.com/bible/155/PSA.91.SBCL">91</a>
+            <a href="https://www.bible.com/bible/155/PSA.92.SBCL">92</a>
+            <a href="https://www.bible.com/bible/155/PSA.93.SBCL">93</a>
+            <a href="https://www.bible.com/bible/155/PSA.94.SBCL">94</a>
+            <a href="https://www.bible.com/bible/155/PSA.95.SBCL">95</a>
+            <a href="https://www.bible.com/bible/155/PSA.96.SBCL">96</a>
+            <a href="https://www.bible.com/bible/155/PSA.97.SBCL">97</a>
+            <a href="https://www.bible.com/bible/155/PSA.98.SBCL">98</a>
+            <a href="https://www.bible.com/bible/155/PSA.99.SBCL">99</a>
+            <a href="https://www.bible.com/bible/155/PSA.100.SBCL">100</a>
+            <a href="https://www.bible.com/bible/155/PSA.101.SBCL">101</a>
+            <a href="https://www.bible.com/bible/155/PSA.102.SBCL">102</a>
+            <a href="https://www.bible.com/bible/155/PSA.103.SBCL">103</a>
+            <a href="https://www.bible.com/bible/155/PSA.104.SBCL">104</a>
+            <a href="https://www.bible.com/bible/155/PSA.105.SBCL">105</a>
+            <a href="https://www.bible.com/bible/155/PSA.106.SBCL">106</a>
+            <a href="https://www.bible.com/bible/155/PSA.107.SBCL">107</a>
+            <a href="https://www.bible.com/bible/155/PSA.108.SBCL">108</a>
+            <a href="https://www.bible.com/bible/155/PSA.109.SBCL">109</a>
+            <a href="https://www.bible.com/bible/155/PSA.110.SBCL">110</a>
+            <a href="https://www.bible.com/bible/155/PSA.111.SBCL">111</a>
+            <a href="https://www.bible.com/bible/155/PSA.112.SBCL">112</a>
+            <a href="https://www.bible.com/bible/155/PSA.113.SBCL">113</a>
+            <a href="https://www.bible.com/bible/155/PSA.114.SBCL">114</a>
+            <a href="https://www.bible.com/bible/155/PSA.115.SBCL">115</a>
+            <a href="https://www.bible.com/bible/155/PSA.116.SBCL">116</a>
+            <a href="https://www.bible.com/bible/155/PSA.117.SBCL">117</a>
+            <a href="https://www.bible.com/bible/155/PSA.118.SBCL">118</a>
+            <a href="https://www.bible.com/bible/155/PSA.119.SBCL">119</a>
+            <a href="https://www.bible.com/bible/155/PSA.120.SBCL">120</a>
+            <a href="https://www.bible.com/bible/155/PSA.121.SBCL">121</a>
+            <a href="https://www.bible.com/bible/155/PSA.122.SBCL">122</a>
+            <a href="https://www.bible.com/bible/155/PSA.123.SBCL">123</a>
+            <a href="https://www.bible.com/bible/155/PSA.124.SBCL">124</a>
+            <a href="https://www.bible.com/bible/155/PSA.125.SBCL">125</a>
+            <a href="https://www.bible.com/bible/155/PSA.126.SBCL">126</a>
+            <a href="https://www.bible.com/bible/155/PSA.127.SBCL">127</a>
+            <a href="https://www.bible.com/bible/155/PSA.128.SBCL">128</a>
+            <a href="https://www.bible.com/bible/155/PSA.129.SBCL">129</a>
+            <a href="https://www.bible.com/bible/155/PSA.130.SBCL">130</a>
+            <a href="https://www.bible.com/bible/155/PSA.131.SBCL">131</a>
+            <a href="https://www.bible.com/bible/155/PSA.132.SBCL">132</a>
+            <a href="https://www.bible.com/bible/155/PSA.133.SBCL">133</a>
+            <a href="https://www.bible.com/bible/155/PSA.134.SBCL">134</a>
+            <a href="https://www.bible.com/bible/155/PSA.135.SBCL">135</a>
+            <a href="https://www.bible.com/bible/155/PSA.136.SBCL">136</a>
+            <a href="https://www.bible.com/bible/155/PSA.137.SBCL">137</a>
+            <a href="https://www.bible.com/bible/155/PSA.138.SBCL">138</a>
+            <a href="https://www.bible.com/bible/155/PSA.139.SBCL">139</a>
+            <a href="https://www.bible.com/bible/155/PSA.140.SBCL">140</a>
+            <a href="https://www.bible.com/bible/155/PSA.141.SBCL">141</a>
+            <a href="https://www.bible.com/bible/155/PSA.142.SBCL">142</a>
+            <a href="https://www.bible.com/bible/155/PSA.143.SBCL">143</a>
+            <a href="https://www.bible.com/bible/155/PSA.144.SBCL">144</a>
+            <a href="https://www.bible.com/bible/155/PSA.145.SBCL">145</a>
+            <a href="https://www.bible.com/bible/155/PSA.146.SBCL">146</a>
+            <a href="https://www.bible.com/bible/155/PSA.147.SBCL">147</a>
+            <a href="https://www.bible.com/bible/155/PSA.148.SBCL">148</a>
+            <a href="https://www.bible.com/bible/155/PSA.149.SBCL">149</a>
+            <a href="https://www.bible.com/bible/155/PSA.150.SBCL">150</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Proverbs
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/PRO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/PRO.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/PRO.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/PRO.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/PRO.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/PRO.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/PRO.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/PRO.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/PRO.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/PRO.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/PRO.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/PRO.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/PRO.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/PRO.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/PRO.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/PRO.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/PRO.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/PRO.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/PRO.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/PRO.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/PRO.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/PRO.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/PRO.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/PRO.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/PRO.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/PRO.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/PRO.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/PRO.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/PRO.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/PRO.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/PRO.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/PRO.31.SBCL">31</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Ecclesiastes
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/ECC.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/ECC.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/ECC.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/ECC.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/ECC.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/ECC.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/ECC.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/ECC.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/ECC.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/ECC.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/ECC.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/ECC.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/ECC.12.SBCL">12</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Song of Solomon
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/SOS.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/SOS.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/SOS.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/SOS.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/SOS.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/SOS.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/SOS.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/SOS.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/SOS.8.SBCL">8</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Isaiah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/ISA.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/ISA.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/ISA.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/ISA.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/ISA.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/ISA.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/ISA.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/ISA.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/ISA.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/ISA.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/ISA.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/ISA.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/ISA.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/ISA.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/ISA.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/ISA.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/ISA.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/ISA.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/ISA.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/ISA.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/ISA.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/ISA.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/ISA.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/ISA.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/ISA.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/ISA.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/ISA.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/ISA.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/ISA.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/ISA.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/ISA.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/ISA.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/ISA.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/ISA.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/ISA.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/ISA.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/ISA.36.SBCL">36</a>
+            <a href="https://www.bible.com/bible/155/ISA.37.SBCL">37</a>
+            <a href="https://www.bible.com/bible/155/ISA.38.SBCL">38</a>
+            <a href="https://www.bible.com/bible/155/ISA.39.SBCL">39</a>
+            <a href="https://www.bible.com/bible/155/ISA.40.SBCL">40</a>
+            <a href="https://www.bible.com/bible/155/ISA.41.SBCL">41</a>
+            <a href="https://www.bible.com/bible/155/ISA.42.SBCL">42</a>
+            <a href="https://www.bible.com/bible/155/ISA.43.SBCL">43</a>
+            <a href="https://www.bible.com/bible/155/ISA.44.SBCL">44</a>
+            <a href="https://www.bible.com/bible/155/ISA.45.SBCL">45</a>
+            <a href="https://www.bible.com/bible/155/ISA.46.SBCL">46</a>
+            <a href="https://www.bible.com/bible/155/ISA.47.SBCL">47</a>
+            <a href="https://www.bible.com/bible/155/ISA.48.SBCL">48</a>
+            <a href="https://www.bible.com/bible/155/ISA.49.SBCL">49</a>
+            <a href="https://www.bible.com/bible/155/ISA.50.SBCL">50</a>
+            <a href="https://www.bible.com/bible/155/ISA.51.SBCL">51</a>
+            <a href="https://www.bible.com/bible/155/ISA.52.SBCL">52</a>
+            <a href="https://www.bible.com/bible/155/ISA.53.SBCL">53</a>
+            <a href="https://www.bible.com/bible/155/ISA.54.SBCL">54</a>
+            <a href="https://www.bible.com/bible/155/ISA.55.SBCL">55</a>
+            <a href="https://www.bible.com/bible/155/ISA.56.SBCL">56</a>
+            <a href="https://www.bible.com/bible/155/ISA.57.SBCL">57</a>
+            <a href="https://www.bible.com/bible/155/ISA.58.SBCL">58</a>
+            <a href="https://www.bible.com/bible/155/ISA.59.SBCL">59</a>
+            <a href="https://www.bible.com/bible/155/ISA.60.SBCL">60</a>
+            <a href="https://www.bible.com/bible/155/ISA.61.SBCL">61</a>
+            <a href="https://www.bible.com/bible/155/ISA.62.SBCL">62</a>
+            <a href="https://www.bible.com/bible/155/ISA.63.SBCL">63</a>
+            <a href="https://www.bible.com/bible/155/ISA.64.SBCL">64</a>
+            <a href="https://www.bible.com/bible/155/ISA.65.SBCL">65</a>
+            <a href="https://www.bible.com/bible/155/ISA.66.SBCL">66</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Jeremiah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JER.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JER.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JER.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JER.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/JER.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/JER.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/JER.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/JER.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/JER.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/JER.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/JER.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/JER.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/JER.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/JER.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/JER.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/JER.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/JER.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/JER.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/JER.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/JER.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/JER.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/JER.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/JER.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/JER.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/JER.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/JER.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/JER.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/JER.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/JER.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/JER.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/JER.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/JER.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/JER.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/JER.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/JER.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/JER.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/JER.36.SBCL">36</a>
+            <a href="https://www.bible.com/bible/155/JER.37.SBCL">37</a>
+            <a href="https://www.bible.com/bible/155/JER.38.SBCL">38</a>
+            <a href="https://www.bible.com/bible/155/JER.39.SBCL">39</a>
+            <a href="https://www.bible.com/bible/155/JER.40.SBCL">40</a>
+            <a href="https://www.bible.com/bible/155/JER.41.SBCL">41</a>
+            <a href="https://www.bible.com/bible/155/JER.42.SBCL">42</a>
+            <a href="https://www.bible.com/bible/155/JER.43.SBCL">43</a>
+            <a href="https://www.bible.com/bible/155/JER.44.SBCL">44</a>
+            <a href="https://www.bible.com/bible/155/JER.45.SBCL">45</a>
+            <a href="https://www.bible.com/bible/155/JER.46.SBCL">46</a>
+            <a href="https://www.bible.com/bible/155/JER.47.SBCL">47</a>
+            <a href="https://www.bible.com/bible/155/JER.48.SBCL">48</a>
+            <a href="https://www.bible.com/bible/155/JER.49.SBCL">49</a>
+            <a href="https://www.bible.com/bible/155/JER.50.SBCL">50</a>
+            <a href="https://www.bible.com/bible/155/JER.51.SBCL">51</a>
+            <a href="https://www.bible.com/bible/155/JER.52.SBCL">52</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Lamentations
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/LAM.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/LAM.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/LAM.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/LAM.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/LAM.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/LAM.5.SBCL">5</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Ezekiel
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/EZE.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/EZE.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/EZE.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/EZE.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/EZE.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/EZE.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/EZE.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/EZE.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/EZE.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/EZE.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/EZE.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/EZE.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/EZE.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/EZE.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/EZE.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/EZE.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/EZE.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/EZE.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/EZE.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/EZE.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/EZE.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/EZE.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/EZE.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/EZE.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/EZE.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/EZE.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/EZE.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/EZE.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/EZE.28.SBCL">28</a>
+            <a href="https://www.bible.com/bible/155/EZE.29.SBCL">29</a>
+            <a href="https://www.bible.com/bible/155/EZE.30.SBCL">30</a>
+            <a href="https://www.bible.com/bible/155/EZE.31.SBCL">31</a>
+            <a href="https://www.bible.com/bible/155/EZE.32.SBCL">32</a>
+            <a href="https://www.bible.com/bible/155/EZE.33.SBCL">33</a>
+            <a href="https://www.bible.com/bible/155/EZE.34.SBCL">34</a>
+            <a href="https://www.bible.com/bible/155/EZE.35.SBCL">35</a>
+            <a href="https://www.bible.com/bible/155/EZE.36.SBCL">36</a>
+            <a href="https://www.bible.com/bible/155/EZE.37.SBCL">37</a>
+            <a href="https://www.bible.com/bible/155/EZE.38.SBCL">38</a>
+            <a href="https://www.bible.com/bible/155/EZE.39.SBCL">39</a>
+            <a href="https://www.bible.com/bible/155/EZE.40.SBCL">40</a>
+            <a href="https://www.bible.com/bible/155/EZE.41.SBCL">41</a>
+            <a href="https://www.bible.com/bible/155/EZE.42.SBCL">42</a>
+            <a href="https://www.bible.com/bible/155/EZE.43.SBCL">43</a>
+            <a href="https://www.bible.com/bible/155/EZE.44.SBCL">44</a>
+            <a href="https://www.bible.com/bible/155/EZE.45.SBCL">45</a>
+            <a href="https://www.bible.com/bible/155/EZE.46.SBCL">46</a>
+            <a href="https://www.bible.com/bible/155/EZE.47.SBCL">47</a>
+            <a href="https://www.bible.com/bible/155/EZE.48.SBCL">48</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Daniel
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/DAN.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/DAN.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/DAN.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/DAN.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/DAN.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/DAN.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/DAN.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/DAN.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/DAN.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/DAN.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/DAN.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/DAN.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/DAN.12.SBCL">12</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Hosea
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/HOS.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/HOS.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/HOS.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/HOS.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/HOS.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/HOS.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/HOS.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/HOS.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/HOS.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/HOS.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/HOS.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/HOS.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/HOS.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/HOS.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/HOS.14.SBCL">14</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Joel
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JOL.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JOL.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JOL.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JOL.3.SBCL">3</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Amos
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/AMO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/AMO.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/AMO.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/AMO.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/AMO.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/AMO.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/AMO.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/AMO.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/AMO.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/AMO.9.SBCL">9</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Obadiah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/OBA.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/OBA.1.SBCL">1</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Jonah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JON.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JON.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JON.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JON.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/JON.4.SBCL">4</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Micah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/MIC.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/MIC.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/MIC.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/MIC.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/MIC.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/MIC.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/MIC.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/MIC.7.SBCL">7</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Nahum
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/NAH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/NAH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/NAH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/NAH.3.SBCL">3</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Habakkuk
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/HAB.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/HAB.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/HAB.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/HAB.3.SBCL">3</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Zephaniah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/ZEP.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/ZEP.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/ZEP.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/ZEP.3.SBCL">3</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Haggai
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/HAG.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/HAG.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/HAG.2.SBCL">2</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Zechariah
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/ZEC.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/ZEC.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/ZEC.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/ZEC.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/ZEC.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/ZEC.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/ZEC.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/ZEC.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/ZEC.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/ZEC.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/ZEC.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/ZEC.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/ZEC.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/ZEC.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/ZEC.14.SBCL">14</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Malachi
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/MAL.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/MAL.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/MAL.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/MAL.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/MAL.4.SBCL">4</a>
+        </div>
+    </div>
+    
+    <h2>Old Testament</h2>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Matthew
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/MAT.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/MAT.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/MAT.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/MAT.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/MAT.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/MAT.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/MAT.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/MAT.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/MAT.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/MAT.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/MAT.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/MAT.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/MAT.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/MAT.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/MAT.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/MAT.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/MAT.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/MAT.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/MAT.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/MAT.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/MAT.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/MAT.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/MAT.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/MAT.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/MAT.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/MAT.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/MAT.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/MAT.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/MAT.28.SBCL">28</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Mark
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/MAR.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/MAR.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/MAR.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/MAR.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/MAR.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/MAR.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/MAR.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/MAR.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/MAR.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/MAR.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/MAR.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/MAR.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/MAR.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/MAR.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/MAR.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/MAR.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/MAR.16.SBCL">16</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Luke
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/LUK.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/LUK.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/LUK.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/LUK.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/LUK.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/LUK.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/LUK.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/LUK.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/LUK.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/LUK.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/LUK.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/LUK.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/LUK.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/LUK.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/LUK.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/LUK.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/LUK.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/LUK.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/LUK.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/LUK.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/LUK.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/LUK.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/LUK.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/LUK.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/LUK.24.SBCL">24</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ John
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JOH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JOH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JOH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JOH.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/JOH.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/JOH.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/JOH.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/JOH.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/JOH.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/JOH.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/JOH.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/JOH.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/JOH.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/JOH.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/JOH.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/JOH.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/JOH.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/JOH.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/JOH.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/JOH.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/JOH.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/JOH.21.SBCL">21</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Acts
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/ACT.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/ACT.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/ACT.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/ACT.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/ACT.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/ACT.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/ACT.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/ACT.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/ACT.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/ACT.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/ACT.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/ACT.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/ACT.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/ACT.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/ACT.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/ACT.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/ACT.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/ACT.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/ACT.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/ACT.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/ACT.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/ACT.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/ACT.22.SBCL">22</a>
+            <a href="https://www.bible.com/bible/155/ACT.23.SBCL">23</a>
+            <a href="https://www.bible.com/bible/155/ACT.24.SBCL">24</a>
+            <a href="https://www.bible.com/bible/155/ACT.25.SBCL">25</a>
+            <a href="https://www.bible.com/bible/155/ACT.26.SBCL">26</a>
+            <a href="https://www.bible.com/bible/155/ACT.27.SBCL">27</a>
+            <a href="https://www.bible.com/bible/155/ACT.28.SBCL">28</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Romans
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/ROM.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/ROM.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/ROM.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/ROM.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/ROM.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/ROM.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/ROM.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/ROM.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/ROM.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/ROM.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/ROM.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/ROM.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/ROM.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/ROM.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/ROM.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/ROM.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/ROM.16.SBCL">16</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 Corinthians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1CO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1CO.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1CO.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1CO.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1CO.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1CO.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/1CO.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/1CO.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/1CO.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/1CO.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/1CO.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/1CO.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/1CO.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/1CO.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/1CO.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/1CO.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/1CO.16.SBCL">16</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 Corinthians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2CO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2CO.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/2CO.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/2CO.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/2CO.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/2CO.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/2CO.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/2CO.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/2CO.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/2CO.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/2CO.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/2CO.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/2CO.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/2CO.13.SBCL">13</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Galatians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/GAL.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/GAL.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/GAL.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/GAL.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/GAL.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/GAL.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/GAL.6.SBCL">6</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Ephesians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/EPH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/EPH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/EPH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/EPH.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/EPH.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/EPH.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/EPH.6.SBCL">6</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Philippians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/PHP.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/PHP.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/PHP.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/PHP.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/PHP.4.SBCL">4</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Colossians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/COL.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/COL.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/COL.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/COL.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/COL.4.SBCL">4</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 Thessalonians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1TH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1TH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1TH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1TH.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1TH.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1TH.5.SBCL">5</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 Thessalonians
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2TH.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2TH.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/2TH.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/2TH.3.SBCL">3</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 Timothy
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1TI.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1TI.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1TI.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1TI.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1TI.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1TI.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/1TI.6.SBCL">6</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 Timothy
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2TI.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2TI.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/2TI.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/2TI.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/2TI.4.SBCL">4</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Titus
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/TIT.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/TIT.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/TIT.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/TIT.3.SBCL">3</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Philemon
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/PHM.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/PHM.1.SBCL">1</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Hebrews
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/HEB.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/HEB.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/HEB.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/HEB.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/HEB.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/HEB.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/HEB.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/HEB.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/HEB.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/HEB.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/HEB.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/HEB.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/HEB.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/HEB.13.SBCL">13</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ James
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JAM.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JAM.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/JAM.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/JAM.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/JAM.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/JAM.5.SBCL">5</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 Peter
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1PE.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1PE.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1PE.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1PE.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1PE.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1PE.5.SBCL">5</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 Peter
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2PE.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2PE.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/2PE.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/2PE.3.SBCL">3</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 1 John
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/1JO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/1JO.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/1JO.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/1JO.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/1JO.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/1JO.5.SBCL">5</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 2 John
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/2JO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/2JO.1.SBCL">1</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ 3 John
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/3JO.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/3JO.1.SBCL">1</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Jude
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/JDE.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/JDE.1.SBCL">1</a>
+        </div>
+    </div>
+
+    <div class="book" onclick="toggleChapters(this)">
+        ▶ Revelation
+        <div class="chapters">
+            <a href="https://www.bible.com/bible/155/REV.INTRO1.SBCL">Introduction</a>
+            <a href="https://www.bible.com/bible/155/REV.1.SBCL">1</a>
+            <a href="https://www.bible.com/bible/155/REV.2.SBCL">2</a>
+            <a href="https://www.bible.com/bible/155/REV.3.SBCL">3</a>
+            <a href="https://www.bible.com/bible/155/REV.4.SBCL">4</a>
+            <a href="https://www.bible.com/bible/155/REV.5.SBCL">5</a>
+            <a href="https://www.bible.com/bible/155/REV.6.SBCL">6</a>
+            <a href="https://www.bible.com/bible/155/REV.7.SBCL">7</a>
+            <a href="https://www.bible.com/bible/155/REV.8.SBCL">8</a>
+            <a href="https://www.bible.com/bible/155/REV.9.SBCL">9</a>
+            <a href="https://www.bible.com/bible/155/REV.10.SBCL">10</a>
+            <a href="https://www.bible.com/bible/155/REV.11.SBCL">11</a>
+            <a href="https://www.bible.com/bible/155/REV.12.SBCL">12</a>
+            <a href="https://www.bible.com/bible/155/REV.13.SBCL">13</a>
+            <a href="https://www.bible.com/bible/155/REV.14.SBCL">14</a>
+            <a href="https://www.bible.com/bible/155/REV.15.SBCL">15</a>
+            <a href="https://www.bible.com/bible/155/REV.16.SBCL">16</a>
+            <a href="https://www.bible.com/bible/155/REV.17.SBCL">17</a>
+            <a href="https://www.bible.com/bible/155/REV.18.SBCL">18</a>
+            <a href="https://www.bible.com/bible/155/REV.19.SBCL">19</a>
+            <a href="https://www.bible.com/bible/155/REV.20.SBCL">20</a>
+            <a href="https://www.bible.com/bible/155/REV.21.SBCL">21</a>
+            <a href="https://www.bible.com/bible/155/REV.22.SBCL">22</a>
+        </div>
+    </div>
+
+</body>
+</html>
